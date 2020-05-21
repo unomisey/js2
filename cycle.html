@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Document</title>
+<!--    <script src="5.js" type="text/javascript" defer></script>-->
+
+</head>
+<body>
+
+    <p>Введите число: </p> <input type="text" id="t1"><br><hr>
+    <button onclick="f1()">Найти</button>
+
+    <script>
+      function f1(){
+       var n = document.getElementById('t1').value;
+
+        for (var i = 2; i <= n; i++) {
+            var flag = 1;
+            if (i > 2 && i % 2 != 0)
+            {
+                for (var j = 3; j*j <= i ; j=j+2)
+                {
+                    if (i%j==0)
+                    {
+                        flag=0;
+                        break;
+                    }
+                }
+            }
+            else if (i != 2) flag = 0;
+            if (flag==1) {console.log(i);}
+        }
+          
+    }
+    </script>
+
+
+</body>
+</html>
